@@ -30,6 +30,8 @@ setup(name='ploneconf2016.policy',
           'Products.RedirectionTool',
           # 'collective.embedly', # Not Plone 5 compatible
           'collective.addthis',
+          'plone.app.mosaic',
+          'Products.QuickImporter',
       ],
       entry_points="""
       # -*- Entry points: -*-
