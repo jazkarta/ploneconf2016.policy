@@ -32,6 +32,7 @@ setup(name='ploneconf2016.policy',
           'collective.addthis',
           'plone.app.mosaic',
           'Products.QuickImporter',
+          'plone.api'
       ],
       entry_points="""
       # -*- Entry points: -*-
