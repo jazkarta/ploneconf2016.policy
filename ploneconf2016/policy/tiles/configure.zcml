@@ -1,0 +1,21 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:i18n="http://namespaces.zope.org/i18n"
+    xmlns:plone="http://namespaces.plone.org/plone"
+    xmlns:browser="http://namespaces.zope.org/browser"
+    i18n_domain="">
+
+  <include package="plone.app.tiles" />
+
+  <plone:tile
+    name="ploneconf2016.slidertile"
+    title="Slider"
+    class=".slider.SliderTile"
+    schema=".slider.ISliderTileSchema"
+    for="*"
+    add_permission="cmf.ModifyPortalContent"
+    permission="zope.Public"
+    template="templates/slider.pt"
+    />
+
+</configure>

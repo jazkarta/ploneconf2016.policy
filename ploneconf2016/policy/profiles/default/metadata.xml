@@ -5,5 +5,6 @@
     <dependency>profile-Products.PloneFormGen:default</dependency>
     <dependency>profile-Products.RedirectionTool:default</dependency>
     <dependency>profile-collective.addthis:default</dependency>
+    <dependency>profile-plone.app.mosaic:default</dependency>
   </dependencies>
 </metadata>
