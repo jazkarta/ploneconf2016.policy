@@ -32,7 +32,8 @@ setup(name='ploneconf2016.policy',
           'collective.addthis',
           'plone.app.mosaic',
           'Products.QuickImporter',
-          'plone.api'
+          'plone.api',
+          'collective.fbshare',
       ],
       entry_points="""
       # -*- Entry points: -*-
