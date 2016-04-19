@@ -34,6 +34,7 @@ setup(name='ploneconf2016.policy',
           'Products.QuickImporter',
           'plone.api',
           'collective.fbshare',
+          'Products.PloneHotfix20160419',
       ],
       entry_points="""
       # -*- Entry points: -*-
