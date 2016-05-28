@@ -35,6 +35,7 @@ setup(name='ploneconf2016.policy',
           'plone.api',
           'collective.fbshare',
           'Products.PloneHotfix20160419',
+          'collective.relatedslider',
       ],
       entry_points="""
       # -*- Entry points: -*-
