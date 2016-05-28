@@ -17,3 +17,8 @@ fake-eggs/
 parts/
 dist/
 var/
+
+*.[a-z]*~
+*.py[co]
+.~lock.*
+Paste*
