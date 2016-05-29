@@ -1,4 +1,7 @@
+from plone import api
 from zope.schema.vocabulary import SimpleVocabulary, SimpleTerm
+from zope.schema.interfaces import IContextSourceBinder
+from zope.interface import directlyProvides
 
 PRESENTATION_DURATION_TYPES = SimpleVocabulary(
     [SimpleTerm(value=u'LongTalk', title=u'Long Talk'),
@@ -23,3 +26,17 @@ AUDIENCE_TYPES = SimpleVocabulary(
      SimpleTerm(value=u'Developer', title=u'Developer'),
      SimpleTerm(value=u'User', title=u'User')]
     )
+
+def persons(context):
+    catalog = api.portal.get_tool('portal_catalog')
+    person_brains = catalog(portal_type='person')
+    terms = []
+    for brain in person_brains:
+        token = brain.getPath()
+        terms.append(SimpleTerm(
+            value=brain.UID,
+            token=token,
+            title=brain.Title.decode('utf8')
+            ))
+    return SimpleVocabulary(terms)
+directlyProvides(persons, IContextSourceBinder)

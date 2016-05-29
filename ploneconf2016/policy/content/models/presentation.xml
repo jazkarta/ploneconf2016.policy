@@ -22,32 +22,29 @@
       <required>False</required>
       <title>Body</title>
     </field>
-
-    <!-- add Speaker (reference a Person) -->
-
-    <field name="duration" type="zope.schema.Set">
+    <field name="speaker" type="zope.schema.Choice">
+      <description>Speaker</description>
+      <required>True</required>
+      <title>Speaker</title>
+      <source>ploneconf2016.policy.content.vocabularies.persons</source>
+    </field>
+    <field name="duration" type="zope.schema.Choice">
       <description>Duration of presentation</description>
       <required>False</required>
       <title>Duration</title>
-      <value_type type="zope.schema.Choice">
-        <source>ploneconf2016.policy.content.vocabularies.PRESENTATION_DURATION_TYPES</source>
-      </value_type>
+      <source>ploneconf2016.policy.content.vocabularies.PRESENTATION_DURATION_TYPES</source>
     </field>
-    <field name="level" type="zope.schema.Set">
+    <field name="level" type="zope.schema.Choice">
       <description>Target Level</description>
       <required>False</required>
       <title>Level</title>
-      <value_type type="zope.schema.Choice">
-        <source>ploneconf2016.policy.content.vocabularies.LEVEL_TYPES</source>
-      </value_type>
+      <source>ploneconf2016.policy.content.vocabularies.LEVEL_TYPES</source>
     </field>
-    <field name="audience" type="zope.schema.Set">
+    <field name="audience" type="zope.schema.Choice">
       <description>Target Audience</description>
       <required>False</required>
       <title>Audience</title>
-      <value_type type="zope.schema.Choice">
-        <source>ploneconf2016.policy.content.vocabularies.AUDIENCE_TYPES</source>
-      </value_type>
+      <source>ploneconf2016.policy.content.vocabularies.AUDIENCE_TYPES</source>
     </field>
 
   </schema>

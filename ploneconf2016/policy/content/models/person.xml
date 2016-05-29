@@ -24,6 +24,7 @@
     </field>
     <field name="headshot" type="plone.namedfile.field.NamedBlobImage">
       <description/>
+      <required>False</required>
       <title>Headshot</title>
     </field>
   </schema>
