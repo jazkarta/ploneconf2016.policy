@@ -22,19 +22,12 @@
       <required>False</required>
       <title>Body</title>
     </field>
-    <field name="level" type="zope.schema.Set">
-      <description>Target Level</description>
-      <required>False</required>
-      <title>Level</title>
-      <value_type type="zope.schema.Choice">
-        <source>ploneconf2016.policy.content.vocabularies.LEVEL_TYPES</source>
-      </value_type>
-    </field>
-    <field name="instructor" type="zope.schema.Choice">
+    <field name="instructor" type="zope.schema.Set">
       <description>Instructor</description>
-      <required>True</required>
       <title>Instructor</title>
-      <source>ploneconf2016.policy.content.vocabularies.persons</source>
+      <value_type type="zope.schema.Choice">
+          <source>ploneconf2016.policy.content.vocabularies.persons</source>
+      </value_type>
     </field>
     <field name="duration" type="zope.schema.Choice">
       <description>Duration of presentation</description>

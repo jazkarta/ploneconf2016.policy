@@ -22,11 +22,12 @@
       <required>False</required>
       <title>Body</title>
     </field>
-    <field name="speaker" type="zope.schema.Choice">
+    <field name="speaker" type="zope.schema.Set">
       <description>Speaker</description>
-      <required>True</required>
       <title>Speaker</title>
-      <source>ploneconf2016.policy.content.vocabularies.persons</source>
+      <value_type type="zope.schema.Choice">
+          <source>ploneconf2016.policy.content.vocabularies.persons</source>
+      </value_type>
     </field>
     <field name="duration" type="zope.schema.Choice">
       <description>Duration of presentation</description>
