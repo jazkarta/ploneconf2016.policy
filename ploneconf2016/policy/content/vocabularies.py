@@ -22,9 +22,10 @@ LEVEL_TYPES = SimpleVocabulary(
     )
 
 AUDIENCE_TYPES = SimpleVocabulary(
-    [SimpleTerm(value=u'Integrator', title=u'Integrator'),
-     SimpleTerm(value=u'Developer', title=u'Developer'),
-     SimpleTerm(value=u'User', title=u'User')]
+    [SimpleTerm(value=u'User', title=u'User'),
+     SimpleTerm(value=u'Integrator', title=u'Integrator'),
+     SimpleTerm(value=u'Designer', title=u'Designer'),
+     SimpleTerm(value=u'Developer', title=u'Developer')]
     )
 
 def persons(context):
