@@ -30,8 +30,11 @@ AUDIENCE_TYPES = SimpleVocabulary(
 
 def persons(context):
     catalog = api.portal.get_tool('portal_catalog')
-    person_brains = catalog(portal_type='person')
+    person_brains = catalog(portal_type='person', 
+                        sort_on='sortable_title',
+                        sort_order='ascending')
     terms = []
+    person_brains[0].Title
     for brain in person_brains:
         token = brain.getPath()
         terms.append(SimpleTerm(

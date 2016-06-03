@@ -24,7 +24,7 @@
     </field>
     <field name="instructor" type="zope.schema.Set">
       <description>Instructor</description>
-      <title>Instructor</title>
+      <title>Instructor(s)</title>
       <value_type type="zope.schema.Choice">
           <source>ploneconf2016.policy.content.vocabularies.persons</source>
       </value_type>
