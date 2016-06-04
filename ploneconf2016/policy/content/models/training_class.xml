@@ -41,12 +41,13 @@
       <title>Level</title>
       <source>ploneconf2016.policy.content.vocabularies.LEVEL_TYPES</source>
     </field>
-    <field name="audience" type="zope.schema.Choice">
+    <field name="audience" type="zope.schema.Set">
       <description>Target Audience</description>
       <required>False</required>
       <title>Audience</title>
-      <source>ploneconf2016.policy.content.vocabularies.AUDIENCE_TYPES</source>
+      <value_type type="zope.schema.Choice">
+          <source>ploneconf2016.policy.content.vocabularies.AUDIENCE_TYPES</source>
+      </value_type>
     </field>
-
   </schema>
 </model>
