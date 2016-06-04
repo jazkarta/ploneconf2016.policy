@@ -10,9 +10,9 @@ PRESENTATION_DURATION_TYPES = SimpleVocabulary(
     )
 
 TRAINING_CLASS_DURATION_TYPES = SimpleVocabulary(
-    [SimpleTerm(value=u'TwoDay', title=u'2 day'),
+    [SimpleTerm(value=u'HalfDay', title=u'1/2 day'),
      SimpleTerm(value=u'OneDay', title=u'1 day'),
-     SimpleTerm(value=u'HalfDay', title=u'1/2 day')]
+     SimpleTerm(value=u'TwoDay', title=u'2 day')]
     )
 
 LEVEL_TYPES = SimpleVocabulary(
