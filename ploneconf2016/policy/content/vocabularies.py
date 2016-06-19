@@ -34,7 +34,6 @@ def persons(context):
                         sort_on='sortable_title',
                         sort_order='ascending')
     terms = []
-    person_brains[0].Title
     for brain in person_brains:
         token = brain.getPath()
         terms.append(SimpleTerm(
