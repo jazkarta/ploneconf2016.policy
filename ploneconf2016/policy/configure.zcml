@@ -12,6 +12,7 @@
 
   <include package=".tiles" />
   <include package=".content" />
+  <include package=".browser" />
 
   <plone:static
     directory="static"
