@@ -8,10 +8,23 @@
     <metal:block fill-slot="content-description" />
 
     <metal:block fill-slot="content-core">
-        <h1>${context/Title}</h1>
-        <h3 tal:condition="context/summary">${context/summary}<h3>
-        <div>&nbsp;</div>
-        <div tal:condition="context/bio" tal:content="structure context/bio/output" ></div>
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-xs-8 col-sm-3">
+            <img tal:define="scales context/@@images;
+                             scale python:scales.scale('headshot', scale='mini')"
+                 tal:condition="scale"
+                 tal:replace="structure python:scale.tag(css_class='image-left')" />
+          </div>
+          <div class="col-xs-10 col-sm-8">
+            <h1>${context/Title}</h1>
+            <h4 tal:condition="context/summary">${context/summary}<h4>
+            <div class="row">
+              <div tal:content="structure context/bio/output|nothing" />
+            </div>
+          </div>
+        </div>
+      </div>
     </metal:block>
 
 </html>
