@@ -15,10 +15,20 @@
                 <a href="#" tal:attributes="href instructor/url">${instructor/name}</a>,
             </span>
         <div>&nbsp;</div>
-        <h4 tal:condition="context/body">${context/body}</h4>
-        <h4 tal:condition="context/duration"><b><span>Duration of Training: </span></b><span>${context/duration}</span></h4>
-        <h4 tal:condition="context/level"><b><span>Target Level: </span></b><span>${context/level}</span></h4>
-        <h4 tal:condition="context/audience"><b><span>Target Audience: </span></b><span>${context/audience}</span></h4>
+        <div tal:condition="context/body" tal:content="structure context/body/output" ></div>
+        <br/>
+        <h4 tal:condition="context/duration"><b>
+            <span>Duration of Training: </span></b>
+            <span>${python:view.vocab_title(context.duration, view.duration_vocab())}</span>
+        </h4>
+        <h4 tal:condition="context/level"><b>
+            <span>Target Level: </span></b>
+            <span>${python:view.vocab_title(context.level, view.level_vocab())}</span>
+        </h4>
+        <h4 tal:condition="context/audience"><b>
+            <span>Target Audience: </span></b>
+            <span>${python:view.vocab_title(context.audience, view.audience_vocab())}</span>
+        </h4>
     </metal:block>
 
 </html>
