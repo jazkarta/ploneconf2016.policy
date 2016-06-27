@@ -8,7 +8,13 @@
     <metal:block fill-slot="content-description" />
 
     <metal:block fill-slot="content-core">
-         Training Class view skeleton
+        <h1>${context/Title}</h1>
+        <h3>${context/summary}<h3>
+        <h4>presented by: ${context/instructor}</h4>
+        <h4>${context/body}</h4>
+        <h4><b><span>Duration of Training: </span></b><span>${context/duration}</span></h4>
+        <h4><b><span>Target Level: </span></b><span>${context/level}</span></h4>
+        <h4><b><span>Target Audience: </span></b><span>${context/audience}</span></h4>
     </metal:block>
 
 </html>
