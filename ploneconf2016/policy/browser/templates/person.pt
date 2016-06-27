@@ -1,0 +1,17 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:metal="http://xml.zope.org/namespaces/metal"
+      xmlns:tal="http://xml.zope.org/namespaces/tal"
+      xmlns:i18n="http://xml.zope.org/namespaces/i18n"
+      metal:use-macro="context/main_template/macros/master">
+
+    <metal:block fill-slot="content-title" />
+    <metal:block fill-slot="content-description" />
+
+    <metal:block fill-slot="content-core">
+        <h1>${context/Title}</h1>
+        <h3 tal:condition="context/summary">${context/summary}<h3>
+        <div>&nbsp;</div>
+        <div tal:condition="context/bio" tal:content="structure context/bio/output" ></div>
+    </metal:block>
+
+</html>

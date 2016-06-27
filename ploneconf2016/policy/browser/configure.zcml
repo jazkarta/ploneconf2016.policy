@@ -23,4 +23,12 @@
       permission="zope2.View"
       />
 
+  <!-- Person -->
+  <browser:page
+      name="view"
+      for="ploneconf2016.policy.content.person.IPerson"
+      template="templates/person.pt"
+      permission="zope2.View"
+      />
+
 </configure>
