@@ -13,8 +13,8 @@ class TrainingClassView(BrowserView):
         """ parse instructor set into something template can iterate over
         """        
         instructor_set = self.context.instructor
-        instructors = [x for x in instructor_set]
-        # XXX get instructors out of set        
-
-        return [{'url':'something', 'name' :'P5Nina'},
-                {'url':'something2', 'name' :'P5Nick'}]
+        instructors = [api.content.get(UID=x) for x in instructor_set]
+        instructor_data = []
+        for x in instructors:
+            instructor_data.append({'url':x.absolute_url(), 'name': x.title})
+        return instructor_data
