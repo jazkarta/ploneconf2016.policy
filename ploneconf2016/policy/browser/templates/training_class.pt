@@ -10,7 +10,11 @@
     <metal:block fill-slot="content-core">
         <h1>${context/Title}</h1>
         <h3 tal:condition="context/summary">${context/summary}<h3>
-        <h4>presented by: ${context/instructor}</h4>
+        <h4><span>presented by: </span>
+            <span tal:repeat="instructor view/instructors">
+                <a href="#" tal:attributes="href instructor/url">${instructor/name}</a>,
+            </span>
+        <div>&nbsp;</div>
         <h4 tal:condition="context/body">${context/body}</h4>
         <h4 tal:condition="context/duration"><b><span>Duration of Training: </span></b><span>${context/duration}</span></h4>
         <h4 tal:condition="context/level"><b><span>Target Level: </span></b><span>${context/level}</span></h4>

@@ -18,6 +18,7 @@
   <browser:page
       name="view"
       for="ploneconf2016.policy.content.training_class.ITrainingClass"
+      class="ploneconf2016.policy.content.training_class.TrainingClassView"
       template="templates/training_class.pt"
       permission="zope2.View"
       />
