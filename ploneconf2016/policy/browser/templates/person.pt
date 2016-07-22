@@ -9,7 +9,7 @@
 
     <metal:block fill-slot="content-core">
       <div class="container-fluid">
-        <div class="row">
+        <div class="row">        
           <div class="col-xs-8 col-sm-3">
             <img tal:define="scales context/@@images;
                              scale python:scales.scale('headshot', scale='mini')"
@@ -17,12 +17,14 @@
                  tal:replace="structure python:scale.tag(css_class='image-left')" />
           </div>
           <div class="col-xs-10 col-sm-8">
-            <h1>${context/Title}</h1>
-            <h4 tal:condition="context/summary">${context/summary}<h4>
-            <div class="row">
-              <div tal:content="structure context/bio/output|nothing" />
-            </div>
+            <h1 style="margin-top: 4px !important;">${context/Title}</h1>
+            <div>&nbsp;</div>
+            <p tal:condition="context/summary">${context/summary}</p>
           </div>
+        </div>
+        <div>&nbsp;</div>
+        <div class="row">
+          <div tal:content="structure context/bio/output|nothing" />
         </div>
       </div>
     </metal:block>
