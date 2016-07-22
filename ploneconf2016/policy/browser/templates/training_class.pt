@@ -23,10 +23,10 @@
         </h4>
         <h4 tal:condition="context/audience"><b>
             <span>Target Audience: </span></b>
-            <span>${python:view.vocab_title(context.audience, view.audience_vocab())}</span>
+            <span tal:repeat="audience python:view.vocab_title(context.audience, view.audience_vocab())">
+                <span>${audience}</span><span tal:condition="not:repeat/audience/end">,</span>
+            </span>
         </h4>
-
-        <div>&nbsp;</div>
         <div tal:condition="context/body" tal:content="structure context/body/output" ></div>
 
     </metal:block>
