@@ -4,21 +4,17 @@
       xmlns:i18n="http://xml.zope.org/namespaces/i18n"
       metal:use-macro="context/main_template/macros/master">
 
-    <metal:block fill-slot="content-title" />
-    <metal:block fill-slot="content-description" />
 
     <metal:block fill-slot="content-core">
-        <h1>${context/Title}</h1>
+
         <h3 tal:condition="context/summary">${context/summary}<h3>
-        <h4><span>presented by: </span>
+
+        <h4><b><span>Instructor: </span></b>
             <span tal:repeat="instructor view/instructors">
-                <a href="#" tal:attributes="href instructor/url">${instructor/name}</a>,
+                <a href="#" tal:attributes="href instructor/url">${instructor/name}</a><span tal:condition="not:repeat/instructor/end">,</span>
             </span>
-        <div>&nbsp;</div>
-        <div tal:condition="context/body" tal:content="structure context/body/output" ></div>
-        <br/>
         <h4 tal:condition="context/duration"><b>
-            <span>Duration of Training: </span></b>
+            <span>Length: </span></b>
             <span>${python:view.vocab_title(context.duration, view.duration_vocab())}</span>
         </h4>
         <h4 tal:condition="context/level"><b>
@@ -29,6 +25,10 @@
             <span>Target Audience: </span></b>
             <span>${python:view.vocab_title(context.audience, view.audience_vocab())}</span>
         </h4>
+
+        <div>&nbsp;</div>
+        <div tal:condition="context/body" tal:content="structure context/body/output" ></div>
+
     </metal:block>
 
 </html>
