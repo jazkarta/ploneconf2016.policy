@@ -1,0 +1,12 @@
+/* Styled for the PFG Training Survey  */
+.pfg-form.formid-training-survey .field,
+.pfg-form.formid-training-survey .FGFieldsetWidget {
+    width: 100% !important;
+}
+
+#pfg-fieldsetname-2-day .formQuestion.label,
+#pfg-fieldsetname-1-day .formQuestion.label,
+#pfg-fieldsetname-1-2-day .formQuestion.label {
+    display: none;
+}
+

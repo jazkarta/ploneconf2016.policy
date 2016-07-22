@@ -1,0 +1,34 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:metal="http://xml.zope.org/namespaces/metal"
+      xmlns:tal="http://xml.zope.org/namespaces/tal"
+      xmlns:i18n="http://xml.zope.org/namespaces/i18n"
+      metal:use-macro="context/main_template/macros/master">
+
+
+    <metal:block fill-slot="content-core">
+
+        <h3 tal:condition="context/summary">${context/summary}<h3>
+
+        <h4><b><span>Instructor: </span></b>
+            <span tal:repeat="instructor view/instructors">
+                <a href="#" tal:attributes="href instructor/url">${instructor/name}</a><span tal:condition="not:repeat/instructor/end">,</span>
+            </span>
+        <h4 tal:condition="context/duration"><b>
+            <span>Length: </span></b>
+            <span>${python:view.vocab_title(context.duration, view.duration_vocab())}</span>
+        </h4>
+        <h4 tal:condition="context/level"><b>
+            <span>Target Level: </span></b>
+            <span>${python:view.vocab_title(context.level, view.level_vocab())}</span>
+        </h4>
+        <h4 tal:condition="context/audience"><b>
+            <span>Target Audience: </span></b>
+            <span>${python:view.vocab_title(context.audience, view.audience_vocab())}</span>
+        </h4>
+
+        <div>&nbsp;</div>
+        <div tal:condition="context/body" tal:content="structure context/body/output" ></div>
+
+    </metal:block>
+
+</html>
