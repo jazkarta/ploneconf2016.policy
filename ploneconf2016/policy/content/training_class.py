@@ -30,7 +30,9 @@ class TrainingClassView(BrowserView):
             instructor_data.append({'url':x.absolute_url(), 'name': x.title})
         return instructor_data
 
-    def vocab_title(self, value, vocab):
+    def vocab_title(self, values, vocab):
         """ return title when given the vocabulary and the value key
         """
-        return vocab.getTerm(value).title
+        if not isinstance(values, (list, set)):
+            return vocab.getTerm(values).title
+        return [vocab.getTerm(x).title for x in values ]
