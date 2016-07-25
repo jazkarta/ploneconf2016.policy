@@ -34,5 +34,8 @@ class TrainingClassView(BrowserView):
         """ return title when given the vocabulary and the value key
         """
         if not isinstance(values, (list, set)):
-            return vocab.getTerm(values).title
+            result = vocab.getTerm(values).title
+            if vocab == AUDIENCE_TYPES:
+                return [result] # hacky fix
+            return result
         return [vocab.getTerm(x).title for x in values ]
