@@ -1,6 +1,6 @@
 /* Styled for the PFG Training Survey  */
 .pfg-form.formid-training-survey .field,
-.pfg-form.formid-training-survey .FGFieldsetWidget {
+.pfg-form.formid-training-survey .PFGFieldsetWidget {
     width: 100% !important;
 }
 
