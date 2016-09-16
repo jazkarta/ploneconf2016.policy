@@ -10,3 +10,8 @@
     display: none;
 }
 
+.col-xs-8.col-sm-3.person-bio {
+    padding-left: 0px !important;
+    min-width: 150px;
+    width: 160px;
+}
