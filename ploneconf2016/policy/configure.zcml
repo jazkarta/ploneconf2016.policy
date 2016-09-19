@@ -35,8 +35,17 @@
       destination="1001"
       title="Add entries to css registry"
       description=""
-      profile="sdhsp.content:default"
+      profile="ploneconf2016.policy:default"
       import_steps="cssregistry"
+      />
+
+  <genericsetup:upgradeDepends
+      source="1001"
+      destination="1002"
+      title="Add Presentation view"
+      description=""
+      profile="ploneconf2016.policy:default"
+      import_steps="typeinfo"
       />
 
 </configure>

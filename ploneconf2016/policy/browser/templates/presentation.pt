@@ -9,15 +9,15 @@
 
         <h3 class="documentDescription description" tal:condition="context/summary">${context/summary}<h3>
 
-        <h4><b><span>Instructor: </span></b>
-            <span tal:repeat="instructor view/instructors">
-                <a href="#" tal:attributes="href instructor/url">${instructor/name}</a><span tal:condition="not:repeat/instructor/end">,</span>
+        <h4><b><span>Speaker: </span></b>
+            <span tal:repeat="speaker view/speakers">
+                <a href="#" tal:attributes="href speaker/url">${speaker/name}</a><span tal:condition="not:repeat/speaker/end">,</span>
             </span>
         </h4>
-        <h4 tal:condition="context/duration"><b>
+        <!--<h4 tal:condition="context/duration"><b>
             <span>Length: </span></b>
             <span>${python:view.vocab_title(context.duration, view.duration_vocab())}</span>
-        </h4>
+        </h4> -->
         <h4 tal:condition="context/level"><b>
             <span>Target Level: </span></b>
             <span>${python:view.vocab_title(context.level, view.level_vocab())}</span>
