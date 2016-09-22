@@ -25,7 +25,7 @@
         <div>&nbsp;</div>
         <div class="row">
             <style>body.section-people .glyphicon.link-https { display:none; }</style> <!-- hide lock icons -->
-            <h4><b><tal:twitter tal:condition="view/twitter_url"><span><a href="#" tal:attributes="href view/twitter_url" tal:content="view/twitter">Twitter: @[handle] </a></span></tal:twitter><tal:twitter_github tal:condition="view/twitter_and_github_exist"><span> -- </span></tal:twitter_github><tal:github tal:condition="view/github_url"><span><a href="#" tal:attributes="href view/github_url" tal:content="view/github"> Github: [handle]: </a></span></tal:github></b>
+            <h4><b><tal:twitter tal:condition="view/twitter_url"><span>Twitter: </span><span><a href="#" tal:attributes="href view/twitter_url" tal:content="view/twitter"> @[handle] </a></span></tal:twitter><tal:twitter_github tal:condition="view/twitter_and_github_exist"><span>&nbsp;</span><span> | <span>&nbsp;</span></tal:twitter_github><tal:github tal:condition="view/github_url"><span>Github: </span><span><a href="#" tal:attributes="href view/github_url" tal:content="view/github">[handle]: </a></span></tal:github></b>
             </h4>
             <tal:twitter_or_github tal:condition="view/twitter_or_github_exist"><div>&nbsp;</div></tal:twitter_or_github>
           <div tal:content="structure context/bio/output|nothing" />

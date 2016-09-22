@@ -15,7 +15,7 @@ class PersonView(BrowserView):
 
     def twitter(self):
         if self.context.twitter_handle != None:
-            return 'Twitter: @%s' % self.context.twitter_handle
+            return '@%s' % self.context.twitter_handle
         return ''
 
     def github_url(self):
@@ -25,7 +25,7 @@ class PersonView(BrowserView):
 
     def github(self):
         if self.context.github_handle != None:
-            return 'Github: %s' % self.context.github_handle
+            return self.context.github_handle
         return ''
 
     def twitter_and_github_exist(self):
