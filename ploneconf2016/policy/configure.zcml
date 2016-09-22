@@ -48,4 +48,13 @@
       import_steps="typeinfo"
       />
 
+  <genericsetup:upgradeDepends
+      source="1002"
+      destination="1003"
+      title="Add Social media fields to Person type and view"
+      description=""
+      profile="ploneconf2016.policy:default"
+      import_steps="typeinfo"
+      />
+
 </configure>

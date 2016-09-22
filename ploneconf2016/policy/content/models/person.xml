@@ -27,5 +27,17 @@
       <required>False</required>
       <title>Headshot</title>
     </field>
+    <field name="twitter_handle" type="zope.schema.TextLine"
+           indexer:searchable="true">
+      <description/>
+      <required>False</required>
+      <title>Twitter handle (without @ symbol)</title>
+    </field>
+    <field name="github_handle" type="zope.schema.TextLine"
+           indexer:searchable="true">
+      <description/>
+      <required>False</required>
+      <title>Github handle</title>
+    </field>
   </schema>
 </model>

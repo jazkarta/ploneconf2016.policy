@@ -27,6 +27,7 @@
   <browser:page
       name="view"
       for="ploneconf2016.policy.content.person.IPerson"
+      class="ploneconf2016.policy.content.person.PersonView"
       template="templates/person.pt"
       permission="zope2.View"
       />
