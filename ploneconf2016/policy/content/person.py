@@ -1,6 +1,6 @@
-from plone.indexer.decorator import indexer
 from plone.supermodel import model
 from Products.Five import BrowserView
+
 
 class IPerson(model.Schema):
     model.load('models/person.xml')

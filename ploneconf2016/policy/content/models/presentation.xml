@@ -10,7 +10,7 @@
       <description/>
       <title>Title</title>
     </field>
-    <field name="summary" type="zope.schema.Text"
+    <field name="description" type="zope.schema.Text"
            indexer:searchable="true">
       <description/>
       <required>False</required>

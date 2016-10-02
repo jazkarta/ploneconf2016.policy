@@ -57,4 +57,13 @@
       import_steps="typeinfo"
       />
 
+  <genericsetup:upgradeStep
+      source="1003"
+      destination="1004"
+      profile="ploneconf2016.policy:default"
+      title="Migrate content to copy 'summary' into description"
+      description=""
+      handler=".setuphandlers.replace_summaries"
+      />
+
 </configure>

@@ -7,7 +7,7 @@
 
     <metal:block fill-slot="content-core">
 
-        <h3 class="documentDescription description" tal:condition="context/summary">${context/summary}<h3>
+        <h3 class="documentDescription description" tal:condition="context/description|nothing">${context/description}<h3>
 
         <h4><b><span>Instructor: </span></b>
             <span tal:repeat="instructor view/instructors">
