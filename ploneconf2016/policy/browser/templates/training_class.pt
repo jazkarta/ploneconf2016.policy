@@ -7,8 +7,6 @@
 
     <metal:block fill-slot="content-core">
 
-        <h3 class="documentDescription description" tal:condition="context/description|nothing">${context/description}<h3>
-
         <h4><b><span>Instructor: </span></b>
             <span tal:repeat="instructor view/instructors">
                 <a href="#" tal:attributes="href instructor/url">${instructor/name}</a><span tal:condition="not:repeat/instructor/end">,</span>
