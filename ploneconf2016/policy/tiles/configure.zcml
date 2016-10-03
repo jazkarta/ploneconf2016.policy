@@ -18,4 +18,15 @@
     template="templates/slider.pt"
     />
 
+  <plone:tile
+    name="ploneconf2016.presentationtile"
+    title="Presentation"
+    class=".presentation.PresentationTile"
+    schema=".presentation.IPresentationTile"
+    for="*"
+    add_permission="cmf.ModifyPortalContent"
+    permission="zope.Public"
+    template="templates/presentation.pt"
+    />
+
 </configure>

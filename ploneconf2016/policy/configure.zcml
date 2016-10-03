@@ -66,4 +66,13 @@
       handler=".setuphandlers.replace_summaries"
       />
 
+  <genericsetup:upgradeDepends
+      source="1004"
+      destination="1005"
+      title="Add custom presentation tile"
+      description=""
+      profile="ploneconf2016.policy:default"
+      import_steps="plone.app.registry"
+      />
+
 </configure>

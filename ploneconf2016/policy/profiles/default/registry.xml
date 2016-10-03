@@ -5,6 +5,7 @@
   <record name="plone.app.tiles">
     <value purge="false">
       <element>ploneconf2016.slidertile</element>
+      <element>ploneconf2016.presentationtile</element>
     </value>
   </record>
 
@@ -128,15 +129,19 @@
       <element>toolbar-code</element>
     </value>
   </record>
-  <record name="plone.app.mosaic.structure_tiles.text.available_actions">
-    <value purge="False">
-      <element>toolbar-code</element>
-    </value>
-  </record>
-  <record name="plone.app.mosaic.app_tiles.plone_app_standardtiles_rawhtml.available_actions">
-    <value purge="False">
-      <element>toolbar-code</element>
-    </value>
-  </record>
+
+  <records prefix="plone.app.mosaic.app_tiles.ploneconf2016_presentationtile"
+           interface="plone.app.mosaic.interfaces.ITile">
+    <value key="name">ploneconf2016.presentationtile</value>
+    <value key="label">Presentation</value>
+    <value key="category">advanced</value>
+    <value key="tile_type">app</value>
+    <value key="default_value"></value>
+    <value key="read_only">false</value>
+    <value key="settings">true</value>
+    <value key="favorite">false</value>
+    <value key="rich_text">false</value>
+    <value key="weight">70</value>
+  </records>
 
 </registry>
