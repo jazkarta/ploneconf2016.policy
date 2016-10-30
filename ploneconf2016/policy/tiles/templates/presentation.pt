@@ -1,6 +1,6 @@
 <div class="PresentationTile presentation-${python:content.duration and content.duration.lower()}" tal:define="content nocall:view/content_context|nothing"
      tal:condition="nocall:content">
-    <a class="TileLink" title="${content/Title}" href="${content/absolute_url}"></a>
+    <a id="${content/id}" class="TileLink" title="${content/Title}" href="${content/absolute_url}"></a>
     <h3 class="TileTitle">${content/title}</h3>
     <p class="TileAuthor" tal:condition="view/speaker|nothing">${view/speaker}</p>
     <p class="TileDescription">${content/description|nothing}</p>
