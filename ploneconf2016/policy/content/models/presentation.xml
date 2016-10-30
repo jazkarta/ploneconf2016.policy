@@ -49,26 +49,22 @@
           <source>ploneconf2016.policy.content.vocabularies.AUDIENCE_TYPES</source>
       </value_type>
     </field>
-    <field name="slides_url" type="zope.schema.TextLine"
-           indexer:searchable="true">
+    <field name="slides_url" type="zope.schema.TextLine">
       <description>URL of slides</description>
       <title>Slides</title>
       <required>False</required>
     </field>
-    <field name="slides_embed" type="zope.schema.Text"
-           indexer:searchable="false">
+    <field name="slides_embed" type="zope.schema.Text">
       <description>Embed code for slides</description>
       <title>Slides embed code</title>
       <required>False</required>
     </field>
-    <field name="video_url" type="zope.schema.TextLine"
-           indexer:searchable="true">
+    <field name="video_url" type="zope.schema.TextLine">
       <description>URL of video recording</description>
       <title>Video</title>
       <required>False</required>
     </field>
-    <field name="video_embed" type="zope.schema.Text"
-           indexer:searchable="false">
+    <field name="video_embed" type="zope.schema.Text">
       <description>Embed code for video recording</description>
       <title>Video embed code</title>
       <required>False</required>
