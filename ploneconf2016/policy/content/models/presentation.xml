@@ -49,5 +49,17 @@
           <source>ploneconf2016.policy.content.vocabularies.AUDIENCE_TYPES</source>
       </value_type>
     </field>
+    <field name="slides" type="zope.schema.TextLine"
+           indexer:searchable="true">
+      <description>URL of slides</description>
+      <title>Slides</title>
+      <required>False</required>
+    </field>
+    <field name="video" type="zope.schema.TextLine"
+           indexer:searchable="true">
+      <description>URL of video recording</description>
+      <title>Video</title>
+      <required>False</required>
+    </field>
   </schema>
 </model>
