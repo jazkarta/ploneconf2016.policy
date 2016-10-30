@@ -26,7 +26,17 @@
                 <span>${audience}</span><span tal:condition="not:repeat/audience/end">,</span>
             </span>
         </h4>
+
+	<h4>
+	  <span>From</span> <span tal:replace="structure view/w/IEventBasic.start/render" /> 
+	  <span>to</span> <span tal:replace="structure view/w/IEventBasic.end/render" />
+	</h4>
+	<h4>
+	  <span>Location:</span> <span tal:replace="structure view/w/IEventLocation.location/render" />
+	</h4>
+
         <div tal:condition="context/body" tal:content="structure context/body/output" ></div>
+
         <h4 tal:condition="context/slides"><b>
             <a href="" tal:attributes="href here/slides" target="_blank">See the presentation slides</a>
         </h4> 
