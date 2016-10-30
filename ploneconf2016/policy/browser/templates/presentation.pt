@@ -37,12 +37,17 @@
 
         <div tal:condition="context/body" tal:content="structure context/body/output" ></div>
 
-        <h4 tal:condition="context/slides"><b>
+        <h4 tal:condition="context/slides_url"><b>
             <a href="" tal:attributes="href here/slides" target="_blank">See the presentation slides</a>
         </h4> 
-        <h4 tal:condition="context/video"><b>
+        <div tal:condition="context/slides_embed" tal:replace="structure context/slides_embed">
+        </div> 
+
+        <h4 tal:condition="context/video_url"><b>
             <a href="" tal:attributes="href here/video" target="_blank">See the presentation video</a>
         </h4>
+        <div tal:condition="context/video_embed" tal:replace="structure context/video_embed">
+        </div> 
 
     </metal:block>
 
