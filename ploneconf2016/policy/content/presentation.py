@@ -1,7 +1,7 @@
 from plone import api
 from plone.indexer.decorator import indexer
 from plone.supermodel import model
-from Products.Five import BrowserView
+from plone.dexterity.browser.view import DefaultView
 from .vocabularies import PRESENTATION_DURATION_TYPES, LEVEL_TYPES, \
 AUDIENCE_TYPES
 
@@ -9,7 +9,7 @@ class IPresentation(model.Schema):
     model.load('models/presentation.xml')
 
 
-class PresentationView(BrowserView):
+class PresentationView(DefaultView):
 
     def duration_vocab(self):
         return PRESENTATION_DURATION_TYPES
