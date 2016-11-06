@@ -11,6 +11,11 @@
             <span tal:repeat="speaker view/speakers">
                 <a href="#" tal:attributes="href speaker/url">${speaker/name}</a><span tal:condition="not:repeat/speaker/end">,</span>
             </span>
+	    <figure class="headshotContainer">
+              <span tal:repeat="speaker view/speakers">
+		<img tal:replace="structure speaker/headshot" />
+              </span>
+	    </figure>
         </h4>
         <!--<h4 tal:condition="context/duration"><b>
             <span>Length: </span></b>
