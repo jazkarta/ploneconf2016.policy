@@ -17,10 +17,10 @@
               </span>
 	    </figure>
         </h4>
-        <!--<h4 tal:condition="context/duration"><b>
+        <h4 tal:condition="context/duration"><b>
             <span>Length: </span></b>
             <span>${python:view.vocab_title(context.duration, view.duration_vocab())}</span>
-        </h4> -->
+        </h4>
         <h4 tal:condition="context/level"><b>
             <span>Target Level: </span></b>
             <span>${python:view.vocab_title(context.level, view.level_vocab())}</span>
