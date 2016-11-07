@@ -27,7 +27,14 @@ class PresentationView(DefaultView):
         speakers = [api.content.get(UID=x) for x in speaker_set]
         speaker_data = []
         for x in speakers:
-            speaker_data.append({'url':x.absolute_url(), 'name': x.title})
+            scale_func = api.content.get_view(name='images', context=x, request=self.request)
+            # scale choices are taken from portal_registry/edit/plone.allowed_sizes
+            scaled_image = getattr(x.aq_explicit, 'headshot', False) and scale_func.scale('headshot', scale='thumb')
+            if scaled_image:
+                tag = scaled_image.tag(css_class='headshotImage')
+            else:
+                tag = ''
+            speaker_data.append({'url':x.absolute_url(), 'name': x.title, 'headshot': tag})
         return speaker_data
 
     def vocab_title(self, values, vocab):
